@@ -17,10 +17,12 @@ public class Capitulo2 {
         /**
          * Usando uma classe anônima
          */
-        usuarios.forEach(new Consumer<Usuario>() {
-            public void accept(Usuario u) {
-                System.out.println(u.getNome());
-            }
-        });
+//        usuarios.forEach(new Consumer<Usuario>() {
+//            public void accept(Usuario u) {
+//                System.out.println(u.getNome());
+//            }
+//        });
+
+        usuarios.forEach(u -> System.out.println(u.getNome()));
     }
 }
