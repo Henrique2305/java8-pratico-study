@@ -14,15 +14,21 @@ public class Capitulo2 {
 //            System.out.println(u.getNome());
 //        }
 
-        /**
-         * Usando uma classe anônima
-         */
+        /** Usando uma classe anônima */
 //        usuarios.forEach(new Consumer<Usuario>() {
 //            public void accept(Usuario u) {
 //                System.out.println(u.getNome());
 //            }
 //        });
 
+        /** Usando lambda */
         usuarios.forEach(u -> System.out.println(u.getNome()));
+
+        /** Interface funcional (Runnable) + lambda */
+        new Thread(() -> {
+            for (int i = 0; i <= 1000; i++) {
+                System.out.println(i);
+            }
+        }).start();
     }
 }
